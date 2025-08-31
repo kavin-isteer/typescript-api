@@ -8,7 +8,7 @@ const dbName = process.env.DB_NAME || '';
 const sequelize = new Sequelize(dbName,dbUsername,dbPassword,
 {
     host:dbHost,
-    dialect:'mysql'
+    dialect:'postgres'
 });
 
 export default sequelize;
