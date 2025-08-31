@@ -8,7 +8,7 @@ app.get("/",(req,res)=>{
 })
 async function start(){
     try{
-        await sequelize.sync({force:true});
+        await sequelize.sync({force:false});
         // Create or find roles
     const [adminRole, adminCreated] = await Role.findOrCreate({
       where: { name: 'admin' },
